@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-let base_url = "http://localhost:9001/v1/hospital/t-medical-item-purchase";
+let base_url = import.meta.env.VITE_BACKEND_HOSPITAL_URL + "/t-medical-item-purchase";
 
 export const useTMedicalItemPurchaseStore = defineStore('tmedicalitempurchase', {
     state: () => ({

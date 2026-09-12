@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-let base_url = "http://localhost:9001/v1/hospital/m-blood-group";
+let base_url = import.meta.env.VITE_BACKEND_HOSPITAL_URL + "/m-blood-group";
 
 export const useMBloodGroupStore = defineStore('mbloodgroup', {
     state: () => ({

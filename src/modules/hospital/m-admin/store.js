@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-let base_url = "http://localhost:9001/v1/hospital/m-admin";
+let base_url = import.meta.env.VITE_BACKEND_HOSPITAL_URL + "/m-admin";
 
 export const useMAdminStore = defineStore('madmin', {
     state: () => ({

@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-let base_url = "http://localhost:9001/v1/hospital/m-payment-method";
+let base_url = import.meta.env.VITE_BACKEND_HOSPITAL_URL + "/m-payment-method";
 
 export const useMPaymentMethodStore = defineStore('mpaymentmethod', {
     state: () => ({
