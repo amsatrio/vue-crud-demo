@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { useTodoStore } from '@/stores/todoStore';
+import { useTodoStore } from '@/modules/todo/store';
 
 const store = useTodoStore();
 const newTodoTitle = ref('');

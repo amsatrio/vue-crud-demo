@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import { useCounterStore } from '@/stores/counterStore';
+import { useCounterStore } from '@/modules/counter/store';
 
 const counterStore = useCounterStore();
 function increment() {
