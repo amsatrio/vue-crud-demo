@@ -24,7 +24,7 @@ const paginationRange = computed(() => {
   const delta = 1;
   const range = [];
   const rangeWithDots = [];
-  let l: number;
+  let l: number | undefined;
 
   for (let i = 1; i <= total; i++) {
     if (i === 1 || i === total || (i >= current - delta && i <= current + delta)) {

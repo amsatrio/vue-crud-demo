@@ -24,7 +24,7 @@ const paginationRange = computed(() => {
   const delta = 1;
   const range = [];
   const rangeWithDots = [];
-  let l: number;
+  let l: number | undefined;
 
   for (let i = 1; i <= total; i++) {
     if (i === 1 || i === total || (i >= current - delta && i <= current + delta)) {
@@ -128,7 +128,7 @@ const handleDelete = async (id: number) => {
               <div class="flex justify-center gap-2">
                 <button @click="openDetailModal(data)" class="btn btn-sm btn-success btn-outline">Details</button>
                 <button @click="openModal(data)" class="btn btn-sm btn-info btn-outline">Edit</button>
-                <button @click="handleDelete(data.id)" class="btn btn-sm btn-error btn-outline">Delete</button>
+                <button @click="handleDelete(data.id || 0)" class="btn btn-sm btn-error btn-outline">Delete</button>
               </div>
             </td>
           </tr>
